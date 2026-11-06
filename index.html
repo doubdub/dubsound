@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>DUB SOUND · Discography & Studio Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      background-color: #080808;
+      color: #e5e5e5;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.5;
+      padding: 60px 24px 120px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 56px;
+    }
+
+    .brand h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .brand p {
+      font-size: 0.85rem;
+      color: #737373;
+      letter-spacing: 0.02em;
+    }
+
+    .contact-meta {
+      text-align: right;
+      font-size: 0.82rem;
+      color: #737373;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .contact-meta .engineer {
+      color: #e5e5e5;
+      font-weight: 500;
+    }
+
+    .contact-meta a {
+      color: #a3a3a3;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-meta a:hover {
+      color: #ffffff;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-top: 2px;
+    }
+
+    /* Section Tag */
+    .section-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: #525252;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    /* Featured Projects */
+    .featured-section {
+      margin-bottom: 64px;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .featured-card {
+      background: #0f0f0f;
+      border: 1px solid #1c1c1c;
+      border-radius: 4px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.2s, background 0.2s;
+      color: inherit;
+    }
+
+    .featured-card:hover {
+      border-color: #2e2e2e;
+      background: #121212;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .card-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #525252;
+    }
+
+    .card-badge {
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 3px 7px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .card-main {
+      margin-bottom: 12px;
+    }
+
+    .card-artist {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f5f5f5;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    .card-desc {
+      font-size: 0.78rem;
+      color: #737373;
+      line-height: 1.4;
+      border-top: 1px solid #181818;
+      padding-top: 10px;
+      margin-top: auto;
+    }
+
+    /* Role Badges */
+    .role-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 2px;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .role-mixmaster {
+      background: #1a221a;
+      color: #6ee7b7;
+      border: 1px solid #233827;
+    }
+
+    .role-master {
+      background: #1f1b29;
+      color: #c4b5fd;
+      border: 1px solid #322849;
+    }
+
+    .role-mix {
+      background: #16202c;
+      color: #7dd3fc;
+      border: 1px solid #1e3348;
+    }
+
+    .role-record {
+      background: #261f18;
+      color: #fdba74;
+      border: 1px solid #432e1c;
+    }
+
+    /* Discography Controls */
+    .disco-section {
+      margin-bottom: 60px;
+    }
+
+    .disco-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+
+    .disco-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      background: #0f0f0f;
+      padding: 12px 16px;
+      border-radius: 4px;
+      border: 1px solid #1a1a1a;
+    }
+
+    .filter-btns {
+      display: flex;
+      gap: 6px;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid #262626;
+      color: #888;
+      padding: 5px 12px;
+      font-size: 0.78rem;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .filter-btn:hover {
+      color: #eee;
+      border-color: #444;
+    }
+
+    .filter-btn.active {
+      background: #e5e5e5;
+      color: #080808;
+      border-color: #e5e5e5;
+      font-weight: 600;
+    }
+
+    .search-input {
+      background: #080808;
+      border: 1px solid #262626;
+      color: #e5e5e5;
+      padding: 6px 12px;
+      font-size: 0.82rem;
+      border-radius: 3px;
+      outline: none;
+      width: 260px;
+      transition: border-color 0.2s;
+      font-family: inherit;
+    }
+
+    .search-input:focus {
+      border-color: #555;
+    }
+
+    /* Discography Table (Desktop Default) */
+    .discography-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .discography-table th {
+      color: #525252;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 12px 16px;
+      border-bottom: 1px solid #1f1f1f;
+    }
+
+    .discography-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #141414;
+      vertical-align: middle;
+      font-size: 0.88rem;
+    }
+
+    .discography-table tr:hover td {
+      background: #0d0d0d;
+    }
+
+    .track-text {
+      color: #d4d4d4;
+    }
+
+    .track-link {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #444;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: text-decoration-color 0.2s, color 0.2s;
+    }
+
+    .track-link:hover {
+      color: #ffffff;
+      text-decoration-color: #ffffff;
+    }
+
+    .link-arrow {
+      font-size: 0.75rem;
+      color: #888;
+    }
+
+    .col-year {
+      color: #666;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      width: 65px;
+      font-weight: 500;
+    }
+
+    .col-artist {
+      color: #ffffff;
+      font-weight: 600;
+      width: 220px;
+    }
+
+    .col-title {
+      color: #d4d4d4;
+    }
+
+    .col-role {
+      width: 130px;
+    }
+
+    .col-label {
+      color: #444;
+      font-size: 0.76rem;
+      text-align: right;
+      width: 130px;
+    }
+
+    /* Footer */
+    footer {
+      padding-top: 48px;
+      border-top: 1px solid #1a1a1a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #525252;
+      font-size: 0.8rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: #737373;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #e5e5e5;
+    }
+
+    /* Tablet */
+    @media (max-width: 900px) {
+      .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Smartphone Mobile View - Role is 100% visible immediately without zooming out */
+    @media (max-width: 680px) {
+      body {
+        padding: 24px 16px 80px;
+      }
+      
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 36px;
+        padding-bottom: 24px;
+      }
+      .contact-meta {
+        text-align: left;
+      }
+      
+      .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .disco-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 10px 12px;
+      }
+      .filter-btns {
+        overflow-x: auto;
+        padding-bottom: 2px;
+      }
+      .search-input {
+        width: 100%;
+      }
+
+      /* Mobile Table Layout: CSS Grid ensures Role Badge is completely visible on the right */
+      .discography-table {
+        display: block;
+        width: 100%;
+      }
+      .discography-table thead {
+        display: none;
+      }
+      .discography-table tbody {
+        display: block;
+        width: 100%;
+      }
+      .discography-table tr {
+        display: grid;
+        grid-template-columns: 32px minmax(0, 1fr) auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+          "year artist role"
+          "year title role";
+        align-items: center;
+        column-gap: 8px;
+        row-gap: 3px;
+        padding: 10px 0;
+        border-bottom: 1px solid #161616;
+        width: 100%;
+      }
+      .discography-table td {
+        padding: 0 !important;
+        border: none !important;
+        width: auto !important;
+        max-width: none !important;
+      }
+      .col-year {
+        grid-area: year;
+        font-size: 0.72rem;
+        color: #666;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 500;
+        align-self: center;
+      }
+      .col-artist {
+        grid-area: artist;
+        font-size: 0.86rem;
+        font-weight: 600;
+        color: #f5f5f5;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 4px !important;
+      }
+      .col-title {
+        grid-area: title;
+        font-size: 0.76rem;
+        color: #888;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 4px !important;
+      }
+      .col-title .track-link {
+        color: #aaa;
+      }
+      .col-role {
+        grid-area: role;
+        text-align: right;
+        align-self: center;
+        justify-self: end;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .col-label {
+        display: none !important;
+      }
+      .role-badge {
+        padding: 3px 6px;
+        font-size: 0.68rem;
+        letter-spacing: 0.02em;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Studio Header -->
+    <header>
+      <div class="brand">
+        <h1>DUB SOUND</h1>
+        <p>Sound Engineering & Production Studio · Guri / Seoul, Korea</p>
+      </div>
+      <div class="contact-meta">
+        <div class="engineer">Engineer 이주호 (Juho Lee)</div>
+        <div><a href="mailto:contact@dubsound.kr">contact@dubsound.kr</a></div>
+        <div class="social-links">
+          <a href="https://open.spotify.com/playlist/0YTqP8n2vFebkCltr6NV5s" target="_blank" style="color: #1db954; font-weight: 500;">Spotify Playlist</a>
+          <span style="color:#333;">·</span>
+          <a href="https://instagram.com/doub_dub" target="_blank">@doub_dub</a>
+          <span style="color:#333;">·</span>
+          <a href="https://instagram.com/dubsound_kr" target="_blank">@dubsound_kr</a>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Featured Works -->
+    <section class="featured-section">
+      <div class="section-tag">FEATURED PROJECTS</div>
+      <div class="featured-grid">
+        
+        <div class="featured-card">
+          <div class="card-top">
+            <span class="card-year">2026</span>
+            <span class="card-badge role-mixmaster">Mix & Master</span>
+          </div>
+          <div class="card-main">
+            <div class="card-artist">KIMKIPYØ</div>
+            <div class="card-title">CHECK OUT (EP)</div>
+          </div>
+          <div class="card-desc">
+            전곡 믹싱 및 마스터링 (All Tracks Mixed & Mastered)
+          </div>
+        </div>
+
+        <div class="featured-card">
+          <div class="card-top">
+            <span class="card-year">2024</span>
+            <span class="card-badge role-mix">Mix</span>
+          </div>
+          <div class="card-main">
+            <div class="card-artist">Chillin Homie (칠린호미)</div>
+            <div class="card-title">Maze Runner (LP)</div>
+          </div>
+          <div class="card-desc">
+            Track 3, 5, 7, 10, 11, 12, 13, 14 Mix
+          </div>
+        </div>
+
+        <div class="featured-card">
+          <div class="card-top">
+            <span class="card-year">2026</span>
+            <span class="card-badge role-mix">Mix</span>
+          </div>
+          <div class="card-main">
+            <div class="card-artist">노윤하</div>
+            <div class="card-title">sonogram (LP)</div>
+          </div>
+          <div class="card-desc">
+            Track 3, 6, 10 Mix
+          </div>
+        </div>
+
+        <div class="featured-card">
+          <div class="card-top">
+            <span class="card-year">2024</span>
+            <span class="card-badge role-master">Master</span>
+          </div>
+          <div class="card-main">
+            <div class="card-artist">반타01 (vanta01)</div>
+            <div class="card-title">Balisong (LP)</div>
+          </div>
+          <div class="card-desc">
+            전곡 마스터링 (11 Tracks Mastered)
+          </div>
+        </div>
+
+        <div class="featured-card">
+          <div class="card-top">
+            <span class="card-year">2022</span>
+            <span class="card-badge role-master">Master</span>
+          </div>
+          <div class="card-main">
+            <div class="card-artist">반타01 (vanta01)</div>
+            <div class="card-title">HOWMUCH1 (EP)</div>
+          </div>
+          <div class="card-desc">
+            전곡 마스터링 (5 Tracks Mastered)
+          </div>
+        </div>
+
+        <div class="featured-card">
+          <div class="card-top">
+            <span class="card-year">2026</span>
+            <span class="card-badge role-master">Master</span>
+          </div>
+          <div class="card-main">
+            <div class="card-artist">Age of Band (밴붐온)</div>
+            <div class="card-title">BREAKOUT Vol.2 (Comp)</div>
+          </div>
+          <div class="card-desc">
+            Track 1, 2, 3, 4, 5, 7 Master
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Complete Archive -->
+    <section class="disco-section">
+      <div class="disco-header">
+        <div>
+          <div class="section-tag">COMPLETE ARCHIVE</div>
+          <h2 style="font-size: 1.15rem; font-weight: 600; color: #fff;">Discography</h2>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="disco-controls">
+        <div class="filter-btns">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="mix">Mixing</button>
+          <button class="filter-btn" data-filter="master">Mastering</button>
+          <button class="filter-btn" data-filter="record">Recording</button>
+        </div>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search artist, album, track..." />
+      </div>
+
+      <!-- Discography Table -->
+      <table class="discography-table">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Artist</th>
+            <th>Title / Project</th>
+            <th>Role</th>
+            <th style="text-align: right;">Type</th>
+          </tr>
+        </thead>
+        <tbody id="discoBody">
+          <tr data-role="master">
+            <td class="col-year">2026</td>
+            <td class="col-artist">A-Chess, Od Rhomp</td>
+            <td class="col-title"><span class="track-text">Mansions of Madness</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2026</td>
+            <td class="col-artist">최우석</td>
+            <td class="col-title"><span class="track-text">상대성이론</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">JIMMYCLINE</td>
+            <td class="col-title"><span class="track-text">AROUND</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">atraii forstii</td>
+            <td class="col-title"><span class="track-text">fetty!</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="record">
+            <td class="col-year">2026</td>
+            <td class="col-artist">최소나</td>
+            <td class="col-title"><span class="track-text">Windblow</span></td>
+            <td class="col-role"><span class="role-badge role-record">Recording</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">OPCD</td>
+            <td class="col-title"><span class="track-text">OHM</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">Maginot</td>
+            <td class="col-title"><span class="track-text">NEW SCHOOL</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">OPCD</td>
+            <td class="col-title"><span class="track-text">OPCD Presents: Folk Blend</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">hvvn</td>
+            <td class="col-title"><span class="track-text">hvving</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="record">
+            <td class="col-year">2026</td>
+            <td class="col-artist">MBN</td>
+            <td class="col-title"><span class="track-text">MBN 기적의 시작, 함께 ON</span></td>
+            <td class="col-role"><span class="role-badge role-record">Recording</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2026</td>
+            <td class="col-artist">Jinuite, 이성현</td>
+            <td class="col-title"><span class="track-text">I for the Internet</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">BV Hai-M</td>
+            <td class="col-title"><span class="track-text">Dreamer's Drama</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">KIMKIPYØ</td>
+            <td class="col-title"><span class="track-text">CHECK OUT</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">노윤하</td>
+            <td class="col-title"><span class="track-text">Sonogram (Tr. 3, 6, 10)</span></td>
+            <td class="col-role"><span class="role-badge role-mix">Mix</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">Balantisse</td>
+            <td class="col-title"><span class="track-text">Moonover</span></td>
+            <td class="col-role"><span class="role-badge role-mix">Mix</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">!dongivafxxk</td>
+            <td class="col-title"><span class="track-text">이 밤은</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">유미유미(YOOMI)</td>
+            <td class="col-title"><span class="track-text">Water Bucket</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2026</td>
+            <td class="col-artist">AoB</td>
+            <td class="col-title"><span class="track-text">AoB 컴필레이션 앨범 Vol.2 : BREAKOUT (Tr. 1, 2, 3, 4, 5, 7)</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2026</td>
+            <td class="col-artist">NAKAMA(나카마) , 매뮤</td>
+            <td class="col-title"><span class="track-text">We are NAKAMA!</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">OPCD</td>
+            <td class="col-title"><span class="track-text">OPCD With AI Project (Tr. 5)</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2026</td>
+            <td class="col-artist">WIZH</td>
+            <td class="col-title"><span class="track-text">All Eyes On Me</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">민찬우</td>
+            <td class="col-title"><span class="track-text">idontknow</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2026</td>
+            <td class="col-artist">Nivernova</td>
+            <td class="col-title"><span class="track-text">Scared to be lonely</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">!dongivafxxk , maginot</td>
+            <td class="col-title"><span class="track-text">잊지마</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2026</td>
+            <td class="col-artist">WIZH</td>
+            <td class="col-title"><span class="track-text">Hit The Rock</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="record">
+            <td class="col-year">2026</td>
+            <td class="col-artist">Fredi Casso</td>
+            <td class="col-title"><span class="track-text">Sunset Blend</span></td>
+            <td class="col-role"><span class="role-badge role-record">Recording</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">유미유미(YOOMI)</td>
+            <td class="col-title"><span class="track-text">Cow say MEOW!</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">신진</td>
+            <td class="col-title"><span class="track-text">돼지</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">UGP</td>
+            <td class="col-title"><span class="track-text">Coastal Blend</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">OPCD</td>
+            <td class="col-title"><span class="track-text">Unlimited Edition (Tr. 2, 3)</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="record">
+            <td class="col-year">2026</td>
+            <td class="col-artist">아륜</td>
+            <td class="col-title"><span class="track-text">별 하나</span></td>
+            <td class="col-role"><span class="role-badge role-record">Recording</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2026</td>
+            <td class="col-artist">BV Hai-M</td>
+            <td class="col-title"><span class="track-text">Infinity pool</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2026</td>
+            <td class="col-artist">KENET</td>
+            <td class="col-title"><span class="track-text">STARDUST</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2025</td>
+            <td class="col-artist">지누이트, 이성현</td>
+            <td class="col-title"><span class="track-text">물이 흐르듯이</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">balantisse</td>
+            <td class="col-title"><span class="track-text">blanc</span></td>
+            <td class="col-role"><span class="role-badge role-mix">Mix</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Binjiptury</td>
+            <td class="col-title"><span class="track-text">Gossip</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">BV HAI M</td>
+            <td class="col-title"><span class="track-text">BASH</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Ahntist</td>
+            <td class="col-title"><span class="track-text">Love Sentence</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Bruno Champman</td>
+            <td class="col-title"><span class="track-text">BACK TO THE FUTURE</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">오니클럽</td>
+            <td class="col-title"><span class="track-text">oniclub_unofficial</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Lagin</td>
+            <td class="col-title"><span class="track-text">2 in the morning</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Bruno Champman</td>
+            <td class="col-title"><span class="track-text">BACK TO THE FUTURE</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Ahntist</td>
+            <td class="col-title"><span class="track-text">Lovekills</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Stanky Facee</td>
+            <td class="col-title"><span class="track-text">Spooky!</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">JIN25</td>
+            <td class="col-title"><span class="track-text">사랑의 청각화</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="record">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Plastics</td>
+            <td class="col-title"><span class="track-text">너랑 있으면</span></td>
+            <td class="col-role"><span class="role-badge role-record">Recording</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2025</td>
+            <td class="col-artist">SATO</td>
+            <td class="col-title"><span class="track-text">Vivid</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="record">
+            <td class="col-year">2025</td>
+            <td class="col-artist">얼</td>
+            <td class="col-title"><span class="track-text">Sunday, have to leave!</span></td>
+            <td class="col-role"><span class="role-badge role-record">Recording</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">JIN25</td>
+            <td class="col-title"><span class="track-text">걱정만 10,000 페이지</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2025</td>
+            <td class="col-artist">김동건</td>
+            <td class="col-title"><span class="track-text">적막한 청춘</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Balantisse</td>
+            <td class="col-title"><span class="track-text">maborosi</span></td>
+            <td class="col-role"><span class="role-badge role-mix">Mix</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Various Artists</td>
+            <td class="col-title"><span class="track-text">Deep Dialogue</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">DeepBlue</td>
+            <td class="col-title"><span class="track-text">Blur Cheek</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">VEKOEL</td>
+            <td class="col-title"><span class="track-text">More Style</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2025</td>
+            <td class="col-artist">김우리</td>
+            <td class="col-title"><span class="track-text">가족이 된다는 것</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Sycho</td>
+            <td class="col-title"><span class="track-text">TAPE NO-P</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Ahntist</td>
+            <td class="col-title"><span class="track-text">Body Language</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Sycho</td>
+            <td class="col-title"><span class="track-text">소행성</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Woodie Gochild</td>
+            <td class="col-title"><span class="track-text">Welcome To My Block (055)</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Lil Sunder11</td>
+            <td class="col-title"><span class="track-text">Fighting With My Demon</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Oniclub</td>
+            <td class="col-title"><span class="track-text">Y2K</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Amplifier Project</td>
+            <td class="col-title"><span class="track-text">Amplifier Project Vol.2</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Wake Up GG</td>
+            <td class="col-title"><span class="track-text">3veryDay</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Hitcher</td>
+            <td class="col-title"><span class="track-text">Role Model</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Jhunnit, DaGarn, MARCIANO</td>
+            <td class="col-title"><span class="track-text">Cheaty</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2025</td>
+            <td class="col-artist">Lil jun, ziika</td>
+            <td class="col-title"><span class="track-text">Dopamine</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Jimmy Brown</td>
+            <td class="col-title"><span class="track-text">힙합 20주년 기념앨범 x Jimmy Brown</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">MORE</td>
+            <td class="col-title"><span class="track-text">힙합 20주년 기념앨범 x MORE</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">정상수</td>
+            <td class="col-title"><span class="track-text">힙합 20주년 기념앨범 x 정상수 &amp; 릴재우</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Bruno Champman</td>
+            <td class="col-title"><span class="track-text">힙합 20주년 기념앨범 x 브루노 챔프맨</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">POY</td>
+            <td class="col-title"><span class="track-text">힙합 20주년 기념앨범 x 베오파드 &amp; POY (Tr. 2)</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Maginot</td>
+            <td class="col-title"><span class="track-text">XXX</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2024</td>
+            <td class="col-artist">유연</td>
+            <td class="col-title"><span class="track-text">23℃ (Tr. 2)</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">서준혁</td>
+            <td class="col-title"><span class="track-text">FRIENDS + FAMILY</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Jhunnit , Maginot</td>
+            <td class="col-title"><span class="track-text">X나 이뻐</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">BV Hai-M</td>
+            <td class="col-title"><span class="track-text">설계도</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">!dongivafxxk</td>
+            <td class="col-title"><span class="track-text">Pop it up</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Stanky Facee</td>
+            <td class="col-title"><span class="track-text">GIALLO</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Bruno Champman</td>
+            <td class="col-title"><span class="track-text">탈피</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Bruno Champman</td>
+            <td class="col-title"><span class="track-text">[WP8] Vol.8 어디쯤</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Bruno Champman</td>
+            <td class="col-title"><span class="track-text">[WP8] Vol.7 Mayhem</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">hvvn, yed</td>
+            <td class="col-title"><span class="track-text">50/50</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Bruno Champman</td>
+            <td class="col-title"><span class="track-text">[WP8] Vol.6 Outlaws For Life</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Chillin Homie</td>
+            <td class="col-title"><span class="track-text">MAZE RUNNER (Tr. 3, 5, 7, 10, 11, 12, 13, 14)</span></td>
+            <td class="col-role"><span class="role-badge role-mix">Mix</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">OPCD</td>
+            <td class="col-title"><span class="track-text">RANDOM SONG TO YOU vol.2</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">차멜레온</td>
+            <td class="col-title"><span class="track-text">MELLUSION (Tr. 6)</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">OPCD</td>
+            <td class="col-title"><span class="track-text">No More D</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">양치기소년단</td>
+            <td class="col-title"><span class="track-text">장난</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2024</td>
+            <td class="col-artist">cwar</td>
+            <td class="col-title"><span class="track-text">Balisong</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="record">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Brandnew music</td>
+            <td class="col-title"><span class="track-text">MUSM op.6 (Tr. 8)</span></td>
+            <td class="col-role"><span class="role-badge role-record">Recording</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">OPCD</td>
+            <td class="col-title"><span class="track-text">RANDOM SONG TO YOU</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2024</td>
+            <td class="col-artist">VENKO</td>
+            <td class="col-title"><span class="track-text">KICK !</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="record">
+            <td class="col-year">2024</td>
+            <td class="col-artist">AYCHA</td>
+            <td class="col-title"><span class="track-text">WURI2URI</span></td>
+            <td class="col-role"><span class="role-badge role-record">Recording</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2024</td>
+            <td class="col-artist">얼</td>
+            <td class="col-title"><span class="track-text">사라</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2024</td>
+            <td class="col-artist">문태소리</td>
+            <td class="col-title"><span class="track-text">긴 밤의 고백</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="record">
+            <td class="col-year">2024</td>
+            <td class="col-artist">양치기소년단</td>
+            <td class="col-title"><span class="track-text">사랑놀이 (Tr. 4)</span></td>
+            <td class="col-role"><span class="role-badge role-record">Recording</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="record">
+            <td class="col-year">2024</td>
+            <td class="col-artist">에이차</td>
+            <td class="col-title"><span class="track-text">쓱 (SSG)</span></td>
+            <td class="col-role"><span class="role-badge role-record">Recording</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Amplifier Project Team</td>
+            <td class="col-title"><span class="track-text">Amplifier Project</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2024</td>
+            <td class="col-artist">OPCD</td>
+            <td class="col-title"><span class="track-text">Make a Wish!</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2024</td>
+            <td class="col-artist">KOBU</td>
+            <td class="col-title"><span class="track-text">Mood</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">제성</td>
+            <td class="col-title"><span class="track-text">One morning when xxxxx awoke</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Maginot , idongivafxxk</td>
+            <td class="col-title"><span class="track-text">Pull up</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Maginot , 8C</td>
+            <td class="col-title"><span class="track-text">Hole in one</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Roocent</td>
+            <td class="col-title"><span class="track-text">수술자각</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">Wavycake</td>
+            <td class="col-title"><span class="track-text">Island</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2024</td>
+            <td class="col-artist">오니클럽</td>
+            <td class="col-title"><span class="track-text">MEME X TAPE</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2023</td>
+            <td class="col-artist">오로지</td>
+            <td class="col-title"><span class="track-text">OHROZY</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2023</td>
+            <td class="col-artist">Maginot</td>
+            <td class="col-title"><span class="track-text">5 and Trip</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2023</td>
+            <td class="col-artist">QuesTion</td>
+            <td class="col-title"><span class="track-text">Slump</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2023</td>
+            <td class="col-artist">Jhunnit</td>
+            <td class="col-title"><span class="track-text">Got Feeling (Deluxe)</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2023</td>
+            <td class="col-artist">VENKO</td>
+            <td class="col-title"><span class="track-text">Flame Flame !!</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2023</td>
+            <td class="col-artist">노아주다 noahjooda</td>
+            <td class="col-title"><span class="track-text">외풍</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2023</td>
+            <td class="col-artist">Doubdub , Lemma , KJ</td>
+            <td class="col-title"><span class="track-text">Miracle</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2023</td>
+            <td class="col-artist">노아주다</td>
+            <td class="col-title"><span class="track-text">Solo Play</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="record">
+            <td class="col-year">2023</td>
+            <td class="col-artist">Navi99</td>
+            <td class="col-title"><span class="track-text">Cruel Winter</span></td>
+            <td class="col-role"><span class="role-badge role-record">Recording</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2023</td>
+            <td class="col-artist">Dumo</td>
+            <td class="col-title"><span class="track-text">언제쯤, 어디부터</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2023</td>
+            <td class="col-artist">DION! X VENi</td>
+            <td class="col-title"><span class="track-text">E R A</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2023</td>
+            <td class="col-artist">DINO.T</td>
+            <td class="col-title"><span class="track-text">After love</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2023</td>
+            <td class="col-artist">Maginot</td>
+            <td class="col-title"><span class="track-text">NONSTOP</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="record">
+            <td class="col-year">2023</td>
+            <td class="col-artist">Sasquatch</td>
+            <td class="col-title"><span class="track-text">YEAR</span></td>
+            <td class="col-role"><span class="role-badge role-record">Recording</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2023</td>
+            <td class="col-artist">Dumo</td>
+            <td class="col-title"><span class="track-text">버리지 못한 것들 (Tr. 1, 3)</span></td>
+            <td class="col-role"><span class="role-badge role-mix">Mix</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">내이름은문태식</td>
+            <td class="col-title"><span class="track-text">Dream Team</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">hvvn Yed</td>
+            <td class="col-title"><span class="track-text">Before Num</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">Chill Como</td>
+            <td class="col-title"><span class="track-text">양치기</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">hvvn</td>
+            <td class="col-title"><span class="track-text">잊어야 (Numb Off)</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">Lemma 서준혁</td>
+            <td class="col-title"><span class="track-text">집단지성 3</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">Super Combi</td>
+            <td class="col-title"><span class="track-text">W Generation</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">QuesTion</td>
+            <td class="col-title"><span class="track-text">Maintain</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">Quad</td>
+            <td class="col-title"><span class="track-text">OPPOSITE</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2022</td>
+            <td class="col-artist">Cwar</td>
+            <td class="col-title"><span class="track-text">HOWMUCH1</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">Bruno Champman , 0NN1</td>
+            <td class="col-title"><span class="track-text">[WP8] Vol.5 THE PEOPLE</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">Buoy</td>
+            <td class="col-title"><span class="track-text">Colorize</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">Bruno Champman , ANTI MIZMO</td>
+            <td class="col-title"><span class="track-text">[WP 8] Vol.4 Nope!</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">Bruno Champman , BadMax</td>
+            <td class="col-title"><span class="track-text">[WP 3] Vol.3 비상사태</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">내이름은 문태식</td>
+            <td class="col-title"><span class="track-text">Broken Thang (Tr. 2, 5, 6, 7, 8)</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">Bruno Champman PhreDdy M</td>
+            <td class="col-title"><span class="track-text">[WP8] Vol.1 팔자</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">buoy</td>
+            <td class="col-title"><span class="track-text">해빙</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">Sycho</td>
+            <td class="col-title"><span class="track-text">SYCHO EP 1</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">hvvn</td>
+            <td class="col-title"><span class="track-text">Contempo</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">Bruno Champman</td>
+            <td class="col-title"><span class="track-text">SHARK</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">서준혁 Lemma</td>
+            <td class="col-title"><span class="track-text">집단지성 2</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2022</td>
+            <td class="col-artist">h!tchi</td>
+            <td class="col-title"><span class="track-text">KIARA</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">KJ Roocent</td>
+            <td class="col-title"><span class="track-text">청기와즈 2</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="master">
+            <td class="col-year">2021</td>
+            <td class="col-artist">Super Combi</td>
+            <td class="col-title"><span class="track-text">M Generation</span></td>
+            <td class="col-role"><span class="role-badge role-master">Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">서준혁</td>
+            <td class="col-title"><span class="track-text">전자 전기 컴퓨터 공학과 음악 (EECM)</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">Chill Como</td>
+            <td class="col-title"><span class="track-text">It happens to the best of us</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">Lemma &amp; 서준혁</td>
+            <td class="col-title"><span class="track-text">집단지성</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">buoy, yed</td>
+            <td class="col-title"><span class="track-text">채로</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">치호</td>
+            <td class="col-title"><span class="track-text">소년</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">Bruno Champman</td>
+            <td class="col-title"><span class="track-text">QUARANTINE</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">Lannistar</td>
+            <td class="col-title"><span class="track-text">Back Block</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">Buoy</td>
+            <td class="col-title"><span class="track-text">Elysium</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">mobby Lannistar</td>
+            <td class="col-title"><span class="track-text">쉽게쉽게</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">Sycho</td>
+            <td class="col-title"><span class="track-text">mOK</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">Ho-on</td>
+            <td class="col-title"><span class="track-text">GMZ</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">골드스킨즈</td>
+            <td class="col-title"><span class="track-text">랩카게</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2021</td>
+            <td class="col-artist">XS</td>
+            <td class="col-title"><span class="track-text">Don't talk</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2020</td>
+            <td class="col-artist">mm (밀리미터)</td>
+            <td class="col-title"><span class="track-text">Infection</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2019</td>
+            <td class="col-artist">Lemma</td>
+            <td class="col-title"><span class="track-text">MONEY TREE</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2019</td>
+            <td class="col-artist">내이름은 문태식</td>
+            <td class="col-title"><span class="track-text">가끔</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2018</td>
+            <td class="col-artist">Team HASHTAG</td>
+            <td class="col-title"><span class="track-text">#CYPHER</span></td>
+            <td class="col-role"><span class="role-badge role-mixmaster">Mix & Master</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2018</td>
+            <td class="col-artist">제스티 (Zesty)</td>
+            <td class="col-title"><span class="track-text">연예인</span></td>
+            <td class="col-role"><span class="role-badge role-mix">Mix</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2018</td>
+            <td class="col-artist">보이텔로 (BOiTELLO)</td>
+            <td class="col-title"><span class="track-text">TELL U WHAT</span></td>
+            <td class="col-role"><span class="role-badge role-mix">Mix</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+          <tr data-role="mix">
+            <td class="col-year">2018</td>
+            <td class="col-artist">보이텔로 (BOiTELLO)</td>
+            <td class="col-title"><span class="track-text">아마 (P R L Y)</span></td>
+            <td class="col-role"><span class="role-badge role-mix">Mix</span></td>
+            <td class="col-label">Official Release</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>&copy; 2026 DUB SOUND. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="mailto:contact@dubsound.kr">contact@dubsound.kr</a>
+        <a href="https://open.spotify.com/playlist/0YTqP8n2vFebkCltr6NV5s" target="_blank">Spotify</a>
+        <a href="https://instagram.com/dubsound_kr" target="_blank">Instagram</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const rows = document.querySelectorAll('#discoBody tr');
+
+    let currentFilter = 'all';
+
+    function applyFilters() {
+      const query = searchInput.value.toLowerCase().trim();
+
+      rows.forEach(row => {
+        const role = row.getAttribute('data-role');
+        const text = row.innerText.toLowerCase();
+
+        const matchesFilter = (currentFilter === 'all') || (role === currentFilter);
+        const matchesQuery = !query || text.includes(query);
+
+        if (matchesFilter && matchesQuery) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.getAttribute('data-filter');
+        applyFilters();
+      });
+    });
+
+    searchInput.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
